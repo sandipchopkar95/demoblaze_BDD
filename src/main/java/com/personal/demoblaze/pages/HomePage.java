@@ -1,0 +1,36 @@
+package com.personal.demoblaze.pages;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class HomePage {
+    WebDriver driver;
+
+    public HomePage(WebDriver driver) {
+        this.driver = driver;
+        PageFactory.initElements(driver, this);
+    }
+
+    @FindBy(xpath="//a[@class='login']")
+    private WebElement button_SignIn;
+
+    @FindBy(xpath="//a[@class='account']")
+    private WebElement button_UserAccount;
+
+    public void click_SignIn() {
+        button_SignIn.click();
+    }
+
+    public void click_UserAccount() {
+        button_UserAccount.click();
+    }
+
+    public String get_LoginAccountString() {
+       return button_UserAccount.getText();
+    }
+
+
+
+}
