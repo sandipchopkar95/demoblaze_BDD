@@ -1,4 +1,4 @@
-Feature: User Login with valid credentials
+Feature: User Login with valid credentials & logout
 
   As a user
   I want to login to my platform account
