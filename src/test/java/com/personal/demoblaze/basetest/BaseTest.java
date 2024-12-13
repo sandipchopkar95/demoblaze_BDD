@@ -2,7 +2,6 @@ package com.personal.demoblaze.basetest;
 
 import com.personal.demoblaze.config.ConfigReader;
 import com.personal.demoblaze.config.DriverManager;
-import com.personal.demoblaze.utils.WaitHelper;
 import org.openqa.selenium.WebDriver;
 import java.io.IOException;
 import java.time.Duration;
@@ -25,14 +24,8 @@ public class BaseTest {
 
     public void tearDown() {
         if (driver != null) {
-            System.out.println("Quitting driver: " + driver.hashCode());
             DriverManager.quitDriver();
             driver = null;
         }
-    }
-
-    public void getWait(){
-
-
     }
 }
